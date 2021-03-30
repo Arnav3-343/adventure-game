@@ -78,7 +78,7 @@ while(not gameOver and not won):
       totalmilesdriven += 20
       turboboost -= 1
     if(turboboost == 0):
-      print(" you can no longer use this powerup")
+      print(" you can no longer use this powerup,you drove 20 miles")
   elif(userinput == "T"):
     print("you win,don't share this cheat code to anyone:T")
     break
