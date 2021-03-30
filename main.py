@@ -64,8 +64,9 @@ while(not gameOver and not won):
     robots -= 4
   elif(userinput == "E" or userinput == "e"):
     if(invisible == 2):
-     print("you have hidden from the invenobots for a short period of time,you cannot use it anymore")
+     print("you have hidden from the robots for a short period of time,you cannot use it anymore")
     invisible -= 2
+    totalmilesdriven += 5
     if(invisible == 0):
         print("you can no longer go invisible")
     
