@@ -12,7 +12,7 @@ print("loading sytems:")
 totalmilesdriven=0
 robots = 20
 invisible=2
-refills = 2
+refills = 3
 fuel= 10
 distanceDriven= 10
 winndistance = 100
@@ -53,6 +53,7 @@ while(not gameOver and not won):
     if(fuel > 0):
       refills -= 1
       print("you have one more gas tank that you can switch")
+      fuel += 20
       if(refills == 0):
         print("Your out of refills")
       
@@ -111,4 +112,3 @@ if(userinput == "T"):
 
 
 
-  
