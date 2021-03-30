@@ -55,7 +55,7 @@ while(not gameOver and not won):
     if(fuel > 0):
       refills -= 1
       print("you have one more gas tank that you can switch")
-      fuel += 28
+      fuel += 26
       if(refills == 0):
         print("Your out of refills")
       
