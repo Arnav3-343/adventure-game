@@ -1,14 +1,15 @@
 import random
 import time
-
 print("Hello,welcome to the adventure game:")
+time.sleep(2)
 print(" you are currently in a hightech car that you stole from invent industries and the robots are chasing you, you have to reach the drop point")
 time.sleep
 print("you have passed the HighMen Bridge")
 time.sleep(2)
-print("welcome to Techisland ")
+print("welcome to Tech island ")
 time.sleep(2)
 print("loading sytems:")
+choice = "Not q"
 totalmilesdriven=0
 robots = 20
 invisible=2
@@ -17,6 +18,7 @@ fuel= 10
 distanceDriven= 10
 winndistance = 100
 turboboost = 1
+invenobotsdistance = 10
 gameOver = False
 won = False
 while(not gameOver and not won):
@@ -24,20 +26,21 @@ while(not gameOver and not won):
   print("--------------------------------")
   print("Here are your options:")
   print("---------------------------------")
-  time.sleep(1)
+  time.sleep(0.3)
   print("A. drive at full speed")
-  time.sleep(1)
+  time.sleep(0.3)
   print("B. replace gas tank")
-  time.sleep(1)
+  time.sleep(0.3)
   print("C. stop for the night")
-  time.sleep(1)
+  time.sleep(0.3)
   print("D. click this to quit the game")
-  time.sleep(1)
+  time.sleep(0.3)
   print("E. invisible")
-  time.sleep(1)
+  time.sleep(0.3)
   print("F. status check")
-  time.sleep(1)
+  time.sleep(0.3)
   print("O. You can activate turbo boost")
+  print("---------------------------------")
   
   userinput = input("What is your option to escape the robots?  ")
   if(userinput=="A" or userinput == "a"):
@@ -65,37 +68,47 @@ while(not gameOver and not won):
         print("you can no longer go invisible")
     
   elif (userinput == "F" or userinput == "f"):
-        print("You have travelled " + str(totalmilesdriven)  + " miles. You have to drive " + str(winndistance - totalmilesdriven) + " miles until you reach the checkpoint.The robots are " + str(robots) + " miles away. You have " + str(fuel) + "gallons of fuel in you tank")
+        print("You have travelled " + str(totalmilesdriven)  + " miles. You have to drive " + str(winndistance - totalmilesdriven) + " miles until you reach the checkpoint.The robots are " + str(robots) + " miles away. You have " + str(fuel) + " gallons of fuel in you tank")
   elif(userinput == "O" or userinput == "o"):
    if(turboboost == 1):
     print("you can activate turbo boost")
-    distanceDriven += 20
+    totalmilesdriven += 65
     turboboost -= 1
   if(turboboost == 0):
     print(" you can no longer use this powerup")
   
-  elif(userinput != "q"):
-    print("Please Choose a valied option")
+  
+  elif (choice != "q"):
+          print("sorry,Invalid input")
   
   if(totalmilesdriven >= 100):
-   print("you got to the check point, you win")
+   print("you got to the check point, you win. Your")
    break
    
   if(robots <= 0):
     print("you lost, the invenobots have got you")
     break
-  if(totalmilesdriven - robots < 10):
-    print("the invenobots are near you! Escape them or they will capture you!")
+  if(totalmilesdriven - robots <= 10 <= 2):
+    print("the robots are near you! Escape them or they will capture you!")
   
   if(userinput == "D"):
     print("game over, refresh the page if you want to play again")
     break
-  if (fuel <= 0):
+  if(userinput == "T"):
+    print("you win,don't share this cheat code to anyone:T")
+    break
+      
+  if(fuel <= 0):
     print("YOU RAN OUT OF FUEL! \nGAME OVER!  ")
     print("\U0001F62A")
     gameOver = True
   elif(fuel < 4):
     print("you have to switch gas tanks")
+
+   
+if(userinput == "T"):
+  print("you win,don't share this cheat code to anyone:T")
+      
 
 
 
