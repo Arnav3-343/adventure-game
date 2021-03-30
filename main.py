@@ -39,6 +39,8 @@ while(not gameOver and not won):
   print("F. status check")
   time.sleep(0.3)
   print("O. You can activate turbo boost")
+  print("special suprise hidden in the code")
+  print("\U0001F92B	")
   print("---------------------------------")
   
   userinput = input("What is your option to escape the robots?  ")
@@ -53,7 +55,7 @@ while(not gameOver and not won):
     if(fuel > 0):
       refills -= 1
       print("you have one more gas tank that you can switch")
-      fuel += 20
+      fuel += 28
       if(refills == 0):
         print("Your out of refills")
       
@@ -82,7 +84,8 @@ while(not gameOver and not won):
           print("sorry,Invalid input")
   
   if(totalmilesdriven >= 100):
-   print("you got to the check point, you win. Your")
+   print("you got to the check point, you win. ")
+   print("\U0001F601	")
    break
    
   if(robots <= 0):
@@ -106,9 +109,7 @@ while(not gameOver and not won):
     print("you have to switch gas tanks")
 
    
-if(userinput == "T"):
-  print("you win,don't share this cheat code to anyone:T")
-      
+
 
 
 
