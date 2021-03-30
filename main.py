@@ -94,7 +94,7 @@ while(not gameOver and not won):
   if(robots <= 0):
     print("you lost, the invenobots have got you")
     break
-  if(totalmilesdriven - robots <= 10 >= 2):
+  if(robots - totalmilesdriven <= 10 ):
     print("the robots are near you! Escape them or they will capture you!")
   
   if(userinput == "D"):
