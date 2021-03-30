@@ -9,7 +9,6 @@ time.sleep(2)
 print("welcome to Tech island ")
 time.sleep(2)
 print("loading sytems:")
-choice = "Not q"
 totalmilesdriven=0
 robots = 20
 invisible=2
@@ -70,15 +69,15 @@ while(not gameOver and not won):
   elif (userinput == "F" or userinput == "f"):
         print("You have travelled " + str(totalmilesdriven)  + " miles. You have to drive " + str(winndistance - totalmilesdriven) + " miles until you reach the checkpoint.The robots are " + str(robots) + " miles away. You have " + str(fuel) + " gallons of fuel in you tank")
   elif(userinput == "O" or userinput == "o"):
-   if(turboboost == 1):
-    print("you can activate turbo boost")
-    totalmilesdriven += 65
-    turboboost -= 1
-  if(turboboost == 0):
-    print(" you can no longer use this powerup")
+    if(turboboost == 1):
+      print("you can activate turbo boost")
+      totalmilesdriven += 20
+      turboboost -= 1
+    if(turboboost == 0):
+      print(" you can no longer use this powerup")
   
   
-  elif (choice != "q"):
+  elif (userinput != 'q'):
           print("sorry,Invalid input")
   
   if(totalmilesdriven >= 100):
@@ -88,7 +87,7 @@ while(not gameOver and not won):
   if(robots <= 0):
     print("you lost, the invenobots have got you")
     break
-  if(totalmilesdriven - robots <= 10 <= 2):
+  if(totalmilesdriven - robots <= 10 >= 2):
     print("the robots are near you! Escape them or they will capture you!")
   
   if(userinput == "D"):
