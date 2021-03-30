@@ -78,6 +78,9 @@ while(not gameOver and not won):
       turboboost -= 1
     if(turboboost == 0):
       print(" you can no longer use this powerup")
+  elif(userinput == "T"):
+    print("you win,don't share this cheat code to anyone:T")
+    break
   
   
   elif (userinput != 'q'):
