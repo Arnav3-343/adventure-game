@@ -55,8 +55,8 @@ while(not gameOver and not won):
     if(fuel > 0):
       refills -= 1
       print("you have one more gas tank that you can switch")
-      fuel += 45
-      if(refills == 0):
+      fuel += 35
+    if(refills == 0):
         print("Your out of refills")
       
   elif(userinput == "C" or userinput == "c"):
